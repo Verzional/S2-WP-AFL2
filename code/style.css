@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    background-color: #191919;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Nav Style */
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    padding: 1%;
+    background-color: #111;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    max-width: 1000px;
+    border-style: none solid solid;
+    border-width: 1px;
+    border-color: #ff0000;
+    border-radius: 0 0 24px 24px;
+    z-index: 100;
+}
+
+.nav-logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo-title img {
+    max-width: 30px;
+    margin-right: 10px;
+    content: url(https://seeklogo.com/images/M/mugiwara-logo-303FD55C54-seeklogo.com.png);
+}
+
+.nav-logo-title a {
+    font-size: 19px;
+    color: #ff0000;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: #ff0000;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 6px 16px;
+    transition: transform .3s, background-color .3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff6666;
+    color: wheat;
+}
+
+/* Header Style */
+#header {
+    display: flex;
+    flex-direction: column;
+    padding: 65px 15px 30px;
+    align-items: center;
+    gap: 30px;
+}
+
+#header .header-texts {
+    margin: auto;
+    text-align: center;
+}
+
+#header .header-texts h1 {
+    display: inline-block;
+    padding: .5rem .8rem;
+    margin-top: 30px;
+    margin-bottom: 8px;
+    font-size: 25px;
+    background-color: #111;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ff0000;
+    border-radius: 10px;
+    color: #cc0000;
+}
+
+#header .header-texts h3 {
+    margin-bottom: 8px;
+    font-size: 25px;
+    line-height: 50px;
+    color: #ff6666;
+}
+
+#header .header-texts p {
+    line-height: 23px;
+}
+
+#header .header-texts p abbr {
+    font-weight: 700;
+    color: #cc0000;
+}
+
+#header .header-filler {
+    max-width: 1000px;
+    width: 100%;
+    content: url(https://miro.medium.com/v2/resize:fit:1400/0*b6CWneSKLedGDyJh);
+}
+
+/* Content Style */
+.content-aside {
+    display: flex;
+    padding: 30px 15px;
+    gap: 15px;
+}
+
+.content-aside .content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    width: 75%;
+    gap: 15px;
+}
+
+.content-aside .content .content-first h2,
+.content-aside .content .content-second h2 {
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: 3px;
+    color: #cc0000;
+    line-height: 30px;
+}
+
+.content-aside .content .content-first p,
+.content-aside .content .content-second p {
+    font-size: 15px;
+    margin-bottom: 8px;
+    text-align: justify;
+    color: whitesmoke;
+}
+
+.content-aside .content .content-second h4 {
+    font-size: 19px;
+    line-height: 30px;
+    margin-bottom: 6px;
+    color: #ff6666;
+    font-weight: 600;
+}
+
+.content-aside aside {
+    margin-top: 8px;
+    margin-left: 8px;
+    position: sticky;
+    top: 80px;
+    width: 25%;
+    height: 100%;
+    background-color: #111;
+    padding: 15px;
+    border: 1px solid #cc0000;
+    border-radius: 24px;
+}
+
+.content-aside aside h2 {
+    color: #cc0000;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.content-aside aside ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-aside aside ul li {
+    width: 100%;
+}
+
+.content-aside aside ul li a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 13px;
+    width: 100%;
+    background-color: #191919;
+    border-radius: 10px;
+    color: whitesmoke
+}
+
+.content-aside aside ul li a:hover {
+    background-color: #ff6666;
+    color: wheat;
+}
+
+.content-aside aside ul+h2 {
+    margin-top: 15px;
+}
+
+/* Articles Style */
+.articles {
+    display: flex;
+    padding: 30px 15px;
+}
+
+.article p{
+    text-align: justify;
+}
+
+.articles table {
+    margin-top: 8px;
+}
+
+.articles table tr {
+    display: flex;
+    gap: 15px;
+}
+
+.articles table tr.row-first {
+    margin-bottom: 45px;
+}
+
+.articles table .row-first .article,
+.articles table .row-second .article-long {
+    width: 100%;
+    padding: 15px;
+    background-color: #111;
+    border-radius: 10px;
+    border: 1px solid #cc0000;
+    color: whitesmoke;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.articles table .row-first .article img,
+.articles table .row-second .article-long img {
+    width: 312.5px; 
+    border-radius: 10px;
+    max-width: 100%; 
+    height: auto; 
+}
+
+.articles table .row-first .article h3,
+.articles table .row-second .article-long h3 {
+    color: #cc0000;
+}
+
+.articles table .row-second .article-long p {
+    margin: 8px 0 0px;
+    text-align: justify;
+}
+
+.articles table .row-first .article a {
+    margin-top: 8px;
+    display: block;
+    background-color: #111;
+    border-radius: 10px;
+    padding: 8px 13px;
+    color: #ff6666;
+    text-align: center;
+}
+
+.articles table .row-first .article a:hover {
+    color: wheat;
+    background-color: #ff6666
+}
+
+.articles table .row-first .article:nth-child(1) img {
+    content: url(https://wallpapercave.com/wp/wp3545717.jpg);
+}
+
+.articles table .row-first .article:nth-child(2) img {
+    content: url(https://c4.wallpaperflare.com/wallpaper/793/875/805/anime-anime-grasoso-bloodborne-video-game-art-wallpaper-preview.jpg);
+}
+
+.articles table .row-first .article:nth-child(3) img {
+    content: url(https://c4.wallpaperflare.com/wallpaper/745/804/2/vincent-bisschop-hollow-knight-fantasy-art-video-games-wallpaper-preview.jpg);
+}
+
+.articles table .row-second td:nth-child(2) img{
+    content: url(https://c4.wallpaperflare.com/wallpaper/532/589/194/god-of-war-axe-bow-kratos-wallpaper-preview.jpg);
+    max-height: 175px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.articles table .row-first .article:hover,
+.articles table .row-second .article-long:hover {
+    animation: scaleIn 0.3s forwards;
+}
+
+/* Creativity Style */
+.creativity {
+    padding: 30px 15px;
+}
+
+.creativity-wrapper {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mini-one,
+.mini-two,
+.mini-three,
+.mini-four {
+    width: calc(50% - 10px);
+    padding: 15px;
+    background-color: #111;
+    border-radius: 10px;
+    border: 1px solid #cc0000;
+    color: whitesmoke;
+    transition: transform 0.3s ease;
+    overflow: hidden; 
+}
+
+.mini-one img,
+.mini-two img,
+.mini-three img,
+.mini-four img {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 445px;
+}
+
+.mini-content h2 {
+    color: #cc0000;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.mini-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 8px;
+    text-align: justify;
+}
+
+.mini-one img {
+    content: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3e461415-cff4-49a9-9589-baed37615a07/dem77yw-d635c026-8649-49f3-8145-36ea8507a0f8.jpg/v1/fill/w_1280,h_721,q_75,strp/sekiro_wallpaper_by_gb6162249_dem77yw-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIxIiwicGF0aCI6IlwvZlwvM2U0NjE0MTUtY2ZmNC00OWE5LTk1ODktYmFlZDM3NjE1YTA3XC9kZW03N3l3LWQ2MzVjMDI2LTg2NDktNDlmMy04MTQ1LTM2ZWE4NTA3YTBmOC5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.SDSD9QDVYoIj_REyxAd6APIsP1dAj8JcG8NyVrAdR0o);
+}
+
+.mini-two img {
+    content: url(https://images6.alphacoders.com/132/1324262.jpeg);
+}
+
+.mini-three img {
+    content: url(https://i.redd.it/dvvbhfepfs451.jpg);
+}
+
+.mini-four img {
+    content: url(https://c4.wallpaperflare.com/wallpaper/139/265/83/video-game-ghost-of-tsushima-hd-wallpaper-preview.jpg);
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.mini-one:hover,
+.mini-two:hover,
+.mini-three:hover,
+.mini-four:hover {
+    animation: scaleIn 0.3s forwards;
+}
+
+
+/* Footer Style */
+footer {
+    padding: 30px 15px 0;
+}
+
+footer .footer-logo {
+    padding: 15px;
+    background-color: #111;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #ff0000;
+    color: #ff0000;
+    text-align: center;
+}
+
+footer .footer-logo h3 {
+    font-size: 30px;
+}
+
+footer .footer-form {
+    margin: 45px auto;
+}
+
+footer .footer-form p:nth-child(1) {
+    font-size: 19px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #cc0000;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+footer .footer-form form p,
+footer .footer-form form label {
+    font-weight: 600;
+    letter-spacing: .5px;
+    margin-bottom: 8px;
+}
+
+footer .footer-form form input[id="name"],
+footer .footer-form form select {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    line-height: 1.5;
+    color: whitesmoke;
+    background-color: #333;
+    border-color: #333;
+    background-clip: padding-box;
+    border: 1px solid #333;
+    border-radius: 4px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+footer .footer-form form select {
+    cursor: pointer;
+    appearance: none;
+}
+
+footer .footer-form form input[id="name"]:focus,
+footer .footer-form form select:focus {
+    background-color: #444;
+    border-color: #444;
+    box-shadow: none !important;
+    outline: none;
+}
+
+footer .footer-form form input[type="radio"] {
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+
+footer .footer-form form br {
+    display: none;
+}
+
+footer .footer-form form label[for="html"]+br,
+footer .footer-form form label[for="css"]+br,
+footer .footer-form form label[for="javascript"]+br {
+    display: block;
+}
+
+footer .footer-form form button {
+    margin-top: 15px;
+    display: block;
+    background-color: #111;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #ff0000;
+    padding: 15px 30px;
+    color: #ff0000;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+}
+
+footer .footer-form form button:hover {
+    border-color: #111;
+    background-color: #ff6666;
+    color: wheat;
+}
+
+footer .footer-credit {
+    padding: 15px;
+    border-style: solid solid none;
+    border-width: 1px;
+    border-color: #ff0000;
+    border-radius: 24px 24px 0 0;
+    background-color: #111;
+    text-align: center;
+}
+
+footer .footer-credit h3 {
+    color: #ff0000;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+    .content-aside {
+        flex-direction: row;
+    }
+    
+    .content-aside .content {
+        width: 75%;
+    }
+    
+    .content-aside aside {
+        width: 25%;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .content-aside {
+        padding: 20px;
+    }
+    
+    .content-aside .content {
+        width: 100%;
+    }
+    
+    .content-aside aside {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .articles table tr {
+        flex-direction: column;
+    }
+    
+    .articles table .row-first .article img {
+        max-width: 100%;
+    }
+    
+    .mini-one,
+    .mini-two,
+    .mini-three,
+    .mini-four {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .mini-one img,
+    .mini-two img,
+    .mini-three img,
+    .mini-four img {
+        max-width: 100%;
+    }
+}
